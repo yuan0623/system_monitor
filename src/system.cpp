@@ -20,13 +20,14 @@ Processor& System::Cpu() { return cpu_; }
 vector<Process>& System::Processes() { 
     
     vector<int> pidList = LinuxParser::Pids();
-    processes_.clear();
+    //processes_.clear();
     
     for(int i:pidList){
         Process proc(i);
-        processes_.push_back(proc);
+        processes_.emplace_back(proc);
     }
-    //std::sort(processes_.begin(),processes_.end(),[](Process& p1,Process& p2){
+    std::sort(processes_.begin(),processes_.end());
+    //std::sort(processes_.end(),processes_.begin());
     //    return (p1>p2);
     //});
     

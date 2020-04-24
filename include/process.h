@@ -1,6 +1,6 @@
 #ifndef PROCESS_H
 #define PROCESS_H
-
+#include <iostream>
 #include <string>
 #include "linux_parser.h"
 /*
@@ -21,6 +21,7 @@ class Process {
   // TODO: Declare any necessary private members
  private:
    int pid_;
+   float cpuUtilization_;
 };
 
 #endif
