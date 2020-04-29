@@ -6,7 +6,7 @@
 #include "linux_parser.h"
 
 using std::stof;
-using std::string;
+
 using std::to_string;
 using std::vector;
 

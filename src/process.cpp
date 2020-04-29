@@ -80,4 +80,4 @@ long int Process::UpTime() { return LinuxParser::UpTime(pid_); }
 // REMOVE: [[maybe_unused]] once you define the function
 bool Process::operator<(Process const& a) const { return  cpuUtilization_ < a.cpuUtilization_ ;}
 
-bool Process::operator>(Process const& a[[maybe_unused]]) const { return true; }
+bool Process::operator>(Process const& a) const { return cpuUtilization_ > a.cpuUtilization_; }

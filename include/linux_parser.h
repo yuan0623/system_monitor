@@ -4,7 +4,7 @@
 #include <fstream>
 #include <regex>
 #include <string>
-
+using std::string;
 namespace LinuxParser {
 // Paths
 const std::string kProcDirectory{"/proc/"};
